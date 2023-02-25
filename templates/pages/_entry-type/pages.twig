@@ -1,0 +1,7 @@
+
+  {# Hero #}
+  {% include "_includes/hero" %}
+
+  {% for block in entry.contentBuilder.collect() %}
+    {% include "_blocks/" ~ block.type %}
+  {% endfor %}

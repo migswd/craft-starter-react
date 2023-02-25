@@ -1,0 +1,37 @@
+{# homepage #}
+{% extends '_layout' %}
+
+
+  {% set env = getenv('ENVIRONMENT') %}
+  {% if env == 'production' %}
+    {% block criticalCss %}
+      <style>
+        {{ source ('criticalCss/home_critical.min.css', ignore_missing = true) }}
+      </style>
+    {% endblock %}
+  {% endif %}
+
+  {% set entry = craft.entries.section('error404').one() %}
+
+{% block content %}
+
+	{# hero block #}
+	{# {% include '_includes/split-hero' %} #}
+	{# end hero block #}
+
+  <section class="py-24 border-t border-gray-200">
+    <div class="container py-68">
+
+      <div class="w-full mx-auto lg:w-2/3">
+        <h1 class="mb-8">{{ entry.title }}</h1>
+
+        <div class="prose prose-lg">
+          {{ entry.text }}
+        </div><!-- /.prose -->
+      </div><!-- /.w-full -->
+
+    </div><!-- /.container py-68 -->
+  </section>
+
+
+{% endblock %}

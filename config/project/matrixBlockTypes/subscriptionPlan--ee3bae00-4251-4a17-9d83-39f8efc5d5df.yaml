@@ -1,0 +1,142 @@
+field: 0a23744a-5d30-462d-9342-aaed59927a6d # Add Plan
+fieldLayouts:
+  5f86cad1-10d4-41de-b361-61cb33e5da24:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 06009129-961c-41d3-99b8-37733b6c6f62 # Select Plan
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b9b461fe-1743-49d8-b2ce-c955c7caa892
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c5defb54-3041-4143-8dd1-073710e168cd # Custom Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff74cb96-1a4d-4d85-9d96-dfe0c22158dc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 203b6a24-9228-4968-9807-0daf26197b99 # Setup Fee
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d0d847e4-cba9-4a56-b100-1a748dfbb9ee
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: db458fd0-b968-4b15-ba0f-e7a07ed14e9d # Default
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e955d80d-c4e5-44dc-a6db-8a2f2d61e56b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5fdf99bf-c831-4549-86a5-75da14206a45
+        userCondition: null
+fields:
+  203b6a24-9228-4968-9807-0daf26197b99: # Setup Fee
+    columnSuffix: cnymfndb
+    contentColumnType: 'decimal(12,2)'
+    fieldGroup: null
+    handle: setupFee
+    instructions: 'Setup Fee for the first payment'
+    name: 'Setup Fee'
+    searchable: true
+    settings:
+      decimals: 2
+      defaultValue: null
+      max: null
+      min: null
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Number
+  06009129-961c-41d3-99b8-37733b6c6f62: # Select Plan
+    columnSuffix: tzvdhada
+    contentColumnType: string
+    fieldGroup: null
+    handle: selectPlan
+    instructions: 'Can''t see your plans? Go to [Subscriptions](https://craft-starter.ddev.site:8488/admin/enupal-stripe/settings/subscriptions?site=default) and click on Refresh Plans'
+    name: 'Select Plan'
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Select Plan...'
+            -
+              - value
+              - ''
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Dropdown
+  c5defb54-3041-4143-8dd1-073710e168cd: # Custom Label
+    columnSuffix: nfaeuenm
+    contentColumnType: text
+    fieldGroup: null
+    handle: customLabel
+    instructions: 'Override the default text displayed for each plan (i.e. “Nickname amount/interval”)'
+    name: 'Custom Label'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: 'Awesome Plan $35.00/month'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  db458fd0-b968-4b15-ba0f-e7a07ed14e9d: # Default
+    columnSuffix: xaudkcmr
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: default
+    instructions: 'Please make sure that just one default is enabled'
+    name: Default
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
+handle: subscriptionPlan
+name: 'Subscription Plan'
+sortOrder: 1

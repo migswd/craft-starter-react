@@ -1,0 +1,365 @@
+dateModified: 1676911340
+elementSources:
+  craft\elements\Entry:
+    -
+      heading: Structures
+      type: heading
+    -
+      disabled: false
+      key: 'section:666b31c2-d6d5-4e80-b9aa-f57b66d5b54a' # Pages
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      key: 'section:9c12e5ad-18e9-498f-bf50-489513409007' # News
+      type: native
+    -
+      heading: 'Supporting Content'
+      type: heading
+    -
+      key: singles
+      tableAttributes:
+        - link
+      type: native
+    -
+      key: 'section:ce27286a-7635-4494-9c9c-77f2d73352f4' # Fragments
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      key: '*'
+      type: native
+    -
+      heading: 'User Guide'
+      type: heading
+    -
+      key: 'section:0784ad32-f952-40b1-9f6c-d0e67d502551'
+      type: native
+    -
+      heading: ''
+      type: heading
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SENDER_NAME
+  replyToEmail: $FROM_EMAIL
+  template: null
+  transportSettings:
+    encryptionMethod: ''
+    host: $EMAIL_HOSTNAME
+    password: $EMAIL_PASSWORD
+    port: $EMAIL_PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $EMAIL_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: $ASSET_BASE_PATH
+    type: craft\fs\Local
+    url: $ASSET_BASE_URL
+meta:
+  __names__:
+    0a23744a-5d30-462d-9342-aaed59927a6d: 'Add Plan' # Add Plan
+    1a78d395-d81a-4b77-8da7-30a49123bbee: English # English
+    1b613ff3-4a1e-421f-8f87-393d2f5dc7d5: 'Max Value' # Max Value
+    1bf9d7d1-0d29-4c3a-8ea8-7d5cce421cfe: Required # Required
+    01d20550-63a0-4d7a-ad9b-5a130e8f55a8: 'Section Title' # Section Title
+    1ef53f94-7edf-48e0-873e-17b1c9d780b4: 'Min Value' # Min Value
+    2b01b0d7-0c08-4e47-8041-e2b6a7fc855b: Caption # Caption
+    2fcd48d2-b2b1-479f-9015-016904e4eab4: $SITE_NAME # $SITE_NAME
+    2ff85f53-2b6e-4657-a50a-20efcacc649a: Handle # Handle
+    3b9496a7-4539-4c28-91bc-3e51c68f4187: Embed # Embed
+    3fd3e1af-3414-4bfe-9592-e9b829d2a45e: Label # Label
+    4d4435a9-cff2-46e6-9e43-ca2b7d62486f: Button # Button
+    4fbdbe51-a311-4483-acfa-4bca556a06c6: Required # Required
+    5bca37e0-a30f-48fd-9fde-3105fb9d9738: 'Notice Bar' # Notice Bar
+    5bed279a-5360-4e96-b92e-3153c98bff40: 'Section Title' # Section Title
+    5d1f2d5b-12f7-4ceb-9685-f8bd68f017a5: 'Basic Form Fields' # Basic Form Fields
+    6adad598-392d-4158-9400-8f90f7fe1fb0: 'Section Subtitle' # Section Subtitle
+    6f74be98-1b1b-470e-a96a-727b01e0b225: 'Video Upload' # Video Upload
+    7bf7da79-8f7d-4a1b-8129-121b24c0d99b: Image # Image
+    7dc76d82-6627-4204-aab8-ecb6723e65f6: Dropdown # Dropdown
+    8a048a2f-6764-494b-8d21-8d7b35421e39: Handle # Handle
+    8a60bb9d-8e34-4487-b809-65134adc6fa1: Padding # Padding
+    8c583e9a-a56d-486d-8550-e7eae61c8088: Slides # Slides
+    08f18078-28b9-4569-9451-8947326487d0: Hidden # Hidden
+    9c12e5ad-18e9-498f-bf50-489513409007: News # News
+    12c7de12-987a-4aa4-890f-ec5cde880851: 'Fallback Image' # Fallback Image
+    14e1bd82-34c0-42c5-a72d-1d002d9775d2: 'Video Title' # Video Title
+    21cf0b66-1337-4efc-89c6-101ae6d06d7d: 'Initial Rows' # Initial Rows
+    25e2157e-9a82-41cd-970f-4fc58cb3a835: Screenshots # Screenshots
+    29d88d99-dd38-43f6-9ac5-3438833c75ba: 'Error 404' # Error 404
+    44b39387-b301-4d54-beaa-37322a454a0d: Handle # Handle
+    48d0d0b8-2e48-4232-8b09-a401c6493902: Fragments # Fragments
+    51b9c3fc-be2a-4ef3-9f2c-66372327c604: Default # Default
+    52f12f1b-ba11-48f3-985d-0ee6e2a6dc4e: 'Notice Bar Location' # Notice Bar Location
+    56f86cc6-5713-447f-8b10-e53f06ef42eb: 'Hide from Nav' # Hide from Nav
+    57a74cde-de83-4b69-88ff-a4472daac7f7: 'Call To Action' # Call To Action
+    64cb9845-5f50-4f8a-ac6b-eb61ca77eb4b: Label # Label
+    70f5d47b-4830-4d51-95fe-bc0f7ccc0670: Uploads # Uploads
+    77af2e3b-d586-4daa-b99c-fd4792c204da: Copy # Copy
+    77af5a62-d057-494a-91ac-9edf65b6b266: 'Content Builder' # Content Builder
+    80c3b02f-d4d4-4fb2-8c5c-1cde8119afad: 'Section Title' # Section Title
+    94e513d5-e874-4ee3-ba6d-a874c0b81c22: Handle # Handle
+    95ce0179-ac46-4ecb-910c-aa91c7a07961: Summary # Summary
+    120a7750-0967-496d-9315-bba6d83eb4b1: 'Standard Hero' # Standard Hero
+    127f0d67-cfaf-4e5d-b3f8-111b7fda6f64: Padding # Padding
+    136d3c61-5e7c-4eb4-afc0-5c78565fbe8b: Button # Button
+    149ec41c-d6de-4ae5-84db-08d285801dd1: SEO # SEO
+    158c7930-10bb-483f-8328-c8aa657d8647: 'Video ID' # Video ID
+    203b6a24-9228-4968-9807-0daf26197b99: 'Setup Fee' # Setup Fee
+    323e9af3-aa75-4f1c-82eb-370e40179f41: 'Slider Hero' # Slider Hero
+    415a954c-eb55-4533-9ffd-64b3eade9469: Fallback # Fallback
+    500fa9dc-aa39-47d7-95e4-55efa0bb747f: 'Hidden Value' # Hidden Value
+    505d226e-5fae-49b8-9460-b78c35449b2e: SectionSubtitle # SectionSubtitle
+    564e1801-ed52-4316-ab9a-0ddddd371f63: CheckBoxes # CheckBoxes
+    0608b317-3611-4a50-a757-9d0414083f50: 'Video Link' # Video Link
+    666b31c2-d6d5-4e80-b9aa-f57b66d5b54a: Pages # Pages
+    702c6149-c6cf-4560-8284-82c33efba3b6: Required # Required
+    747cef3b-28d5-427b-a9d5-eb0debfed6a6: Options # Options
+    0878c4de-b946-4c8e-bcce-fe18cd77a73e: 'Site Admin' # Site Admin
+    2456a57a-605c-4af0-9611-f48ca631ff0a: Video # Video
+    4116f227-348c-4509-bc7a-6767a28fd40c: 'Contact Page' # Contact Page
+    5026b221-a48f-4868-9f48-07428068e77e: 'Related Entries' # Related Entries
+    5408ada5-0913-4b08-b8d4-0e8a8b56a42b: Test # Test
+    5489ed3b-28c1-4a26-ac7e-97b0182e6652: 'Enable Notice Bar' # Enable Notice Bar
+    8084d027-d1a0-424e-930b-a4217b9862f2: 'Public Schema' # Public Schema
+    8491df26-ac74-440e-8ce9-403654b8ce98: Copy # Copy
+    8873b180-8851-4223-908f-cabdb5b40c31: 'Single Line' # Single Line
+    10748c54-7d1f-4b35-9fd9-57bb11a751bc: Copy # Copy
+    45625a48-7140-46aa-8d2c-e4a043c680a3: SEO # SEO
+    59621bb5-03e8-481a-b377-5e08b5a79c12: Button # Button
+    70339fac-606b-4827-9a19-c97a3f0bd59c: Copy # Copy
+    408314ae-e32d-471b-a729-25f4ce759ac4: 'Notice Bar' # Notice Bar
+    418401d4-f08e-47eb-a216-719e3d8f4ccb: 'Hero Title' # Hero Title
+    709926a1-d145-4c7e-96e0-1f2f5c135802: Placeholder # Placeholder
+    854806b9-7b9c-4bee-b636-6ffb1d144b34: 'Section Title' # Section Title
+    01313804-5d1a-410f-9da8-42ea30ae231d: 'Slide Title' # Slide Title
+    06009129-961c-41d3-99b8-37733b6c6f62: 'Select Plan' # Select Plan
+    21077893-9405-4330-ba61-9f695515c9fb: 'Hero Title' # Hero Title
+    a1f1511b-fb77-4c36-bc34-8850810c5ecc: Required # Required
+    a6ff8999-8dbd-43ec-8ef5-145cd9700377: Handle # Handle
+    a491c9c6-ed47-48dc-a835-fe7a0e88644c: Paragraph # Paragraph
+    a983660a-2b2e-413f-a79c-498b502b4f85: 'Code Embed' # Code Embed
+    aac80dd6-df34-4cd2-a92f-14debb37b911: Fragment # Fragment
+    ab8abc7e-2a4d-4858-98ea-9a6954a434da: Hero # Hero
+    abe453b3-ed3b-4092-ba7d-5dd1b5435cf1: Number # Number
+    aceada82-b2fc-459c-b4d2-992dd90b7c25: 'Radio Buttons' # Radio Buttons
+    b2f53aa5-81a3-466c-af2d-e30dab4ed3d8: Image # Image
+    b4d947dc-370e-4404-807b-b165534a1503: 'Basic Hero' # Basic Hero
+    b312d78c-b490-46da-aeff-70a1be5a5505: 'Error 404' # Error 404
+    b507c631-830f-46d6-b625-4d4a6df7775c: Padding # Padding
+    b2007669-385a-48ab-8bb3-88019d7c65de: Padding # Padding
+    bb838d9b-476f-487c-8cc2-8e01b9423d92: Pages # Pages
+    c5defb54-3041-4143-8dd1-073710e168cd: 'Custom Label' # Custom Label
+    c33fedfd-ec76-45db-93dc-a12697e4a2aa: 'Listing Image' # Listing Image
+    c42af8a8-feb9-4ab1-be37-71324207a8da: Handle # Handle
+    c78e0b43-9945-41ae-bdc4-9e38f07eca01: Button # Button
+    c166cd47-6f64-49e0-b33d-6aceadb3fcc3: fragments # fragments
+    c951c9a0-1cca-4210-bef8-2d3d0446e841: 'Related Entries' # Related Entries
+    cb1e9895-70db-4741-88b6-c637a23ad8e7: Label # Label
+    cc618569-5c0e-4ff7-9b4a-2fe9ed27af1f: 'Background Image' # Background Image
+    ce27286a-7635-4494-9c9c-77f2d73352f4: Fragments # Fragments
+    cf771399-6f67-4917-bd2f-0173c3504c7e: Padding # Padding
+    d0d30187-1d75-4391-93c0-e9650030a8ee: Label # Label
+    d2fd7201-bb4e-48a1-a0f7-e901e558e0cd: Options # Options
+    d5f8da04-ca55-4c9f-8605-e7f8779e82b8: Image # Image
+    d59f931d-37a7-4cb9-ac6b-68e0bb987ad2: 'News Categories' # News Categories
+    d415c22b-6ef9-4ce3-8f0c-b9767c0d3438: Label # Label
+    d653c2d4-4597-4bc3-b8f4-0bef90b843e9: Required # Required
+    d1511275-c802-4850-9b74-6e305f2cc1c7: 'Asset Fields' # Asset Fields
+    da3d7ec4-1d85-47ba-a517-6c81d94cc9d2: Copy # Copy
+    db458fd0-b968-4b15-ba0f-e7a07ed14e9d: Default # Default
+    dbff8535-c8bd-4629-bc58-732972504e1b: 'Alt Text' # Alt Text
+    dfa0e2b9-5981-416d-83a5-8264c0435961: Placeholder # Placeholder
+    e3dea9df-426f-43a5-96fd-927882533aa9: 'News Listing' # News Listing
+    e285fc8c-8b64-4829-afe0-88f9d0c3c8c4: 'Section Title' # Section Title
+    ea7fe716-adee-4200-a8ca-15362418cd97: Home # Home
+    eba5d95d-21f3-4efa-9ae3-009e2dcc1950: Label # Label
+    ebaeaa9e-3b99-42e1-96ee-2babcac94be8: Required # Required
+    ec7b0a8e-a712-4f28-b0b8-d88654fc74fc: Options # Options
+    ee3bae00-4251-4a17-9d83-39f8efc5d5df: 'Subscription Plan' # Subscription Plan
+    ef8cc244-dfa8-41b1-945d-cb673ae71824: Common # Common
+    ef96fab7-f640-44a7-a909-950254f09b98: Handle # Handle
+    f03239f9-af65-481a-b6b8-76e0e158244f: Caption # Caption
+    f4da8483-be1a-439d-8918-afde0ea14454: Text # Text
+    f90a85bd-91b2-462b-acb4-8f265ded647e: Copy # Copy
+    fbdde691-0df2-4e8e-b1a8-61a1f555fd0e: 'News Categories' # News Categories
+plugins:
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  campaign:
+    edition: pro
+    enabled: true
+    licenseKey: Q5OP3HBP6RGD9LM2M015IYYV
+    schemaVersion: 2.5.1
+    settings:
+      allowedOrigins: null
+      apiKey: gaqovmgnmkshqrxk
+      batchJobDelay: 10
+      defaultNotificationContactIds: null
+      enableAnonymousTracking: false
+      fromNamesEmails:
+        -
+          - mig
+          - miguel@evolutionary.co
+          - ''
+          - 2
+      geoIp: false
+      ipstackApiKey: null
+      mailgunWebhookSigningKey: null
+      maxBatchSize: 10000
+      maxPendingContacts: 5
+      maxRetryAttempts: 10
+      maxSendAttempts: 3
+      maxSendFailuresAllowed: 1
+      memoryLimit: 1024M
+      memoryThreshold: 0.8
+      postmarkAllowedIpAddresses:
+        - 3.134.147.250
+        - 50.31.156.6
+        - 50.31.156.77
+        - 18.217.206.57
+      purgePendingContactsDuration: 0
+      reCaptcha: false
+      reCaptchaErrorMessage: 'Your form submission was blocked by Google reCAPTCHA. Please go back and try again.'
+      reCaptchaSecretKey: null
+      reCaptchaSiteKey: null
+      sendVerificationEmailsViaCraft: false
+      sendoutJobTtr: 300
+      showSendoutTitleField: false
+      testMode: false
+      timeLimit: 3600
+      timeThreshold: 0.8
+      transportSettings: null
+      transportType: craft\mail\transportadapters\Sendmail
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      allowedMessageFields: null
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from Your Website'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: $TO_EMAIL
+  enupal-stripe:
+    edition: pro
+    enabled: true
+    licenseKey: QPZQJL0A0GMO13MSLKXXR22D
+    schemaVersion: 5.1.0
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  image-toolbox:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  matrixmate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: ZQUMKM0GI52EX5848GDWLOHE
+    schemaVersion: 3.0.11
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 0F9VOPZ558WMQISLHBLYMB51
+    schemaVersion: 3.0.11
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      excludeNonCanonicalUrls: false
+      generatorEnabled: true
+      headersEnabled: true
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
+      manuallySetEnvironment: false
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 0
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+      truncateDescriptionTags: '1'
+      truncateTitleTags: '1'
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  templatecomments:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  typogrify:
+    edition: standard
+    enabled: false
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $SITE_NAME
+  retryDuration: null
+  schemaVersion: 4.0.0.9
+  timeZone: America/Toronto

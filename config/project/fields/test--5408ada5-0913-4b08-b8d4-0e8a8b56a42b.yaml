@@ -1,0 +1,19 @@
+columnSuffix: jvqlcjbl
+contentColumnType: text
+fieldGroup: ef8cc244-dfa8-41b1-945d-cb673ae71824 # Common
+handle: test
+instructions: null
+name: Test
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,182 @@
+<nav class="bg-white border-b border-gray-200">
+  <div class="container w-full text-gray-700 max-w-screen">
+    <div
+      x-data="{ open: false }"
+      class="flex flex-col mx-auto max-w-screen lg:flex-row"
+      :class="{'h-screen':open, 'h-auto':!open}">
+
+      <div class="flex flex-row items-center justify-between px-4 py-2">
+        <a href="{{siteUrl }}" class="text-lg font-semibold tracking-widest text-gray-900 uppercase dark-mode:text-white focus:outline-none focus:shadow-outline">
+          <span title="{{ siteName }}">insert logo1xx</span>
+          <span class="sr-only">Home</span>
+        </a>
+
+        <button class="mr-8 rounded-lg md:mr-12 lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open;toggleOverflow();">
+          {# close icon at mobile #}
+          {{ svg('@webroot/assets/images/svg/close.svg')|attr({ class:'h-6 w-6', 'x-show':'open',  'x-cloak':''}) }}
+          <span class="sr-only" x-show="open">Close Menu</span><!-- /.sr-only -->
+
+          {# hamburger menu at mobile #}
+          {{ svg('@webroot/assets/images/svg/hamburger.svg')|attr({ class:'h-6 w-6', 'x-show':'!open'}) }}
+          <span class="sr-only" x-show="!open">Open Menu</span><!-- /.sr-only -->
+        </button>
+      </div>
+
+      {# main nav #}
+      <nav class="flex-col hidden pb-4 lg:flex-grow h-screen123 lg:pb-0 lg:flex lg:justify-start lg:flex-row lg:h-auto" aria-label="Main Navigation" :class="{'flex': open, 'hidden': !open}">
+        <ul class="flex flex-col flex-wrap pl-0 m-0 lg:flex-row">
+
+          {% set pages = craft.entries.section('pages').hideFromNav('0').level('<='~4).all() %}
+
+          {% nav entry in pages %}
+            <li class="group relative
+              {# conditionally add classes to either top level entries or child entries #}
+              {{ entry.level =='1' ? 'block lg:px-0 xl:px-0 mr-1 py-2':'border-b border-white border-opacity-[0.2]' }}"
+
+              {# if entry has children make it a dropdown/flyout #}
+              {{ entry.hasDescendants ? 'x-data="{isOpen:false }"  @mouseleave="isOpen = false"':'' }}>
+
+              <a href="{{ entry.hasDescendants ? '#' : entry.url }}"
+                class="py-2
+                {{ entry.level =='1' ? 'px-4 group-hover:bg-gray-400 group-hover:text-white':'text-white bg-transparent hover:text-gray-100 lg:text-sm' }}"
+
+                {% if entry.hasDescendants %}
+                  @click="isOpen = !isOpen"
+                  x-on:click.prevent
+                  :class="{'' : isOpen}"
+                {% endif %}>
+
+                  {{ entry.title }}
+              </a>
+
+              {# display all child entries #}
+              {% ifchildren %}
+
+                {#
+                  if has children and is not a top level entry
+                  then add a left chevron
+                #}
+                {% if entry.level !="1" %}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" class="hidden lg:inline-block fill-white absolute top-[10px] right-0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                {% endif %}
+
+                {# wrap children with ul and display them #}
+                <ul
+                  class="p-2 bg-gray-600"
+                  aria-label="submenu"
+                   x-show="isOpen"
+                   @click.away="isOpen = false">
+
+                   {# display parent entry again
+                      since it's not reachable by click
+                   #}
+                   <li class="group relative border-b border-white border-opacity-[0.2]">
+                     <a href="{{ entry.url }}" class="py-2 text-white bg-transparent hover:text-gray-100 lg:text-sm">{{ entry.title }}</a>
+                   </li><!-- /.p-3 bg-green-200 -->
+                   {# end show parent entry #}
+
+                  {% children %}
+                </ul>
+              {% endifchildren %}
+              {# end children #}
+
+            </li>
+          {% endnav %}
+
+
+
+        </ul>
+      </nav>
+
+      {# utility nav here #}
+      <nav class="flex-col flex-grow pb-4 mb-auto lg:pb-0 lg:flex lg:justify-center lg:flex-row lg:h-auto lg:mb-0" aria-label="utility nav" :class="{'flex': open, 'hidden': !open}">
+
+        {#
+        // dark mode buttons
+        // change styles in tailwind by prefixing classes with dark:
+        // if no dark mode comment out this include
+        #}
+        {% include "_includes/dark-mode" %}
+
+        <ul class="flex flex-col flex-wrap pl-0 m-0 lg:flex-row">
+
+          {# desktop search #}
+          <li
+            x-data="{expanded:false}"
+            class="relative hidden py-2 mr-1 lg:ml-auto group lg:px-0 xl:px-0 lg:block">
+            <button
+                @click="expanded = ! expanded"
+                class="px-2 py-1 h-[38px] mt-1">
+                <span class="sr-only">{{ "Search"|t }}</span>
+                {{ svg('@webroot/assets/images/svg/search.svg')|attr({'height':'20px', 'width':'20px', 'x-show':'!expanded'}) }}
+                {{ svg('@webroot/assets/images/svg/close.svg')|attr({'height':'20px', 'width':'20px', 'x-show':'expanded'}) }}
+              </button>
+
+            <div
+              x-show="expanded"
+              x-trap="expanded"
+              x-collapse
+              x-on:click.away="expanded = false"
+              x-on:keydown.escape.prevent.stop="expanded = false"
+              class="right-0 z-20 px-2 py-2 my-1 bg-gray-100 shadow lg:absolute">
+
+                <form
+                  action="{{ url('search') }}"
+                  class="flex flex-row w-[305px]">
+                  <label for="q" class="sr-only">Search</label>
+                  <input
+                    id="q"
+                    type="text"
+                    name="q"
+                    placeholder="Search"
+                    class="px-6 py-1 my-1 text-lg bg-white border border-gray-200 placeholder:text-gray-400 focus-visible:outline-gray-400">
+
+                    <button
+                      type="submit"
+                      class="px-2 py-1 border border-gray-200 bg-white h-[38px] mt-1">
+                      <span class="sr-only">{{ "Search"|t }}</span>
+                      {{ svg('@webroot/assets/images/svg/search.svg')|attr({'height':'20px', 'width':'20px'}) }}
+                    </button>
+                </form>
+            </div>
+
+          </li>
+
+          {# mobile search #}
+          <li class="relative block py-2 mr-1 lg:ml-auto group lg:px-0 xl:px-0 lg:hidden">
+            <form
+              action="{{ url('search') }}"
+              class="flex flex-row w-[305px] px-4">
+                <label for="mobile-q" class="sr-only">
+                search
+                </label>
+                <input
+                id="mobile-q"
+                type="text"
+                name="q"
+                placeholder="search"
+              class="px-6 py-1 my-1 text-lg bg-white border border-gray-600 placeholder:text-gray-400 focus-visible:outline-gray-900">
+                <button
+                  type="submit"
+                  class="px-2 py-1 border border-gray-600 bg-white h-[38px] mt-1">
+                  <span class="sr-only">{{ "Search"|t }}</span>
+                  {{ svg('@webroot/assets/images/svg/search.svg')|attr({'height':'20px', 'width':'20px  '}) }}
+                </button>
+            </form>
+
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</nav>
+
+
+{% js %}
+  function toggleOverflow() {
+    document.getElementById('body').classList.toggle('overflow-hidden');
+  }
+{% endjs %}

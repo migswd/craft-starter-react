@@ -1,0 +1,15 @@
+
+  {# Hero #}
+  {% include "_includes/hero" %}
+
+  <section class="border-t border-gray-200 section-y-padding">
+    <div class="container">
+      <div class="w-full prose prose-lg">
+        {{ entry.copy }}
+      </div><!-- /.prose -->
+    </div><!-- /.container -->
+  </section>
+
+{# contact form #}
+{{ sprig('_components/contact-form') }}
+{# {% include "_includes/contact-form" %} #}

@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: null
+handle: enupalStripeBasicFields
+instructions: 'All data saved are stored as “metadata” with each Stripe payment record within your Stripe dashboard.'
+name: 'Basic Form Fields'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_enupalstripebasicfields}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: null
+handle: enupalMultiplePlans
+instructions: 'Customize the plans that the customer should select'
+name: 'Add Plan'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_enupalmultipleplans}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

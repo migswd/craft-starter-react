@@ -1,0 +1,37 @@
+{% set notice = craft.entries.section('noticeBar').one() %}
+
+{% if notice.enableNoticeBar == '1'
+    and ( notice.noticeBarLocation !="homePageOnly" or ( entry.slug == '__home__' ) )
+%}
+
+  <div x-data="{ expanded: $persist(true).as('notice-bar').using(sessionStorage) }">
+    <div
+      class="shadow-inner drop-shadow bg-gradient-to-b from-gray-100 via-gray-50 to-gray-100"
+      x-show="expanded"
+      x-collapse.duration.300ms >
+      <div class="container">
+        <div class="relative flex flex-row items-center w-full mx-auto lg:w-5/6">
+          <div class="py-4 grow">
+            {{ notice.text|retcon([
+                ['attr', 'p', { class: 'm-0 text-sm' }]
+              ]) }}
+          </div>
+          {% if notice.button|length %}
+            {{ notice.button.getLink({
+                class: 'btn mx-8',
+              }) }}
+          {% endif %}
+          <button
+            class="absolute text-xs font-bold text-red-400 top-1 right-2"
+            @click="expanded = ! expanded"
+            aria-label="Close">
+            X
+          </button>
+
+        </div><!-- /.w-full flex flex-row -->
+      </div><!-- /.container -->
+    </div>
+  </div>
+
+{% endif %}
+

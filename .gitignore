@@ -1,0 +1,39 @@
+# General
+######################
+.DS_Store
+*.sql
+*.bak
+# *.zip
+*.gz
+
+# Development tools
+######################
+/.vscode/
+/.ddev/
+/.idea/
+/.git/
+/node_modules/
+
+# Craft CMS runtime, vendor, etc
+######################
+/public/cpresources/
+/storage/
+/vendor/
+
+# Local dev environment configuration
+######################
+/.env
+
+# Uploaded files (images, videos, ...)
+######################
+# /public/assets/
+# /public/uploads/
+
+# Compiled files (js, css, ...)
+######################
+# /public/src/css/cp.css
+# /public/src/css/main.css
+
+
+
+
